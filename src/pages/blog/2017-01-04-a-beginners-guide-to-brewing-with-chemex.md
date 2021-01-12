@@ -15,6 +15,38 @@ tags:
 
 youtube dBWaXrccHR8
 
+```
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: "youtube",
+  // Visible label
+  label: "Youtube",
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [{ name: "id", label: "Youtube Video ID", widget: "string" }],
+  // Pattern to identify a block as being an instance of this component
+  pattern: /^youtube (\S+)$/,
+  // Function to extract data elements from the regexp match
+  fromBlock: function (match) {
+    return {
+      id: match[1],
+    };
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: function (obj) {
+    return "youtube " + obj.id;
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function (obj) {
+    return (
+      '<img src="http://img.youtube.com/vi/' +
+      obj.id +
+      '/maxresdefault.jpg" alt="Youtube Video"/>'
+    );
+  },
+});
+```
+
 This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.
 
 In 1958, designers at the [Illinois Institute of Technology](https://www.spacefarm.digital) said that the Chemex Coffeemaker is *"one of the best-designed products of modern times"*, and so is included in the collection of the Museum of Modern Art in New York City.
