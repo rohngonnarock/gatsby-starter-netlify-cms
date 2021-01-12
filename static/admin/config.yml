@@ -26,20 +26,51 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: "blog2"
-    label: "Blog2"
-    folder: "src/pages/blog2"
+  - name: 'kitchenSink' # all the things in one entry, for documentation and quick testing
+    label: 'Kitchen Sink'
+    folder: 'src/pages/sink'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - label: 'List'
+        name: 'list'
+        widget: 'list'
+        fields:
+          - { label: 'String', name: 'string', widget: 'string' }
+          - { label: 'Boolean', name: 'boolean', widget: 'boolean' }
+          - { label: 'Text', name: 'text', widget: 'text' }
+          - { label: 'Number', name: 'number', widget: 'number' }
+          - { label: 'Markdown', name: 'markdown', widget: 'markdown' }
+          - { label: 'Datetime', name: 'datetime', widget: 'datetime' }
+          - { label: 'Date', name: 'date', widget: 'date' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'File', name: 'file', widget: 'file' }
+          - { label: 'Select', name: 'select', widget: 'select', options: ['a', 'b', 'c'] }
+      - label: 'Typed List'
+        name: 'typed_list'
+        widget: 'list'
+        types:
+          - label: 'Type 1 Object'
+            name: 'type_1_object'
+            widget: 'object'
+            fields:
+              - { label: 'String', name: 'string', widget: 'string' }
+              - { label: 'Boolean', name: 'boolean', widget: 'boolean' }
+              - { label: 'Text', name: 'text', widget: 'text' }
+          - label: 'Type 2 Object'
+            name: 'type_2_object'
+            widget: 'object'
+            fields:
+              - { label: 'Number', name: 'number', widget: 'number' }
+              - { label: 'Select', name: 'select', widget: 'select', options: ['a', 'b', 'c'] }
+              - { label: 'Datetime', name: 'datetime', widget: 'datetime' }
+              - { label: 'Markdown', name: 'markdown', widget: 'markdown' }
+          - label: 'Type 3 Object'
+            name: 'type_3_object'
+            widget: 'object'
+            fields:
+              - { label: 'Date', name: 'date', widget: 'date' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'File', name: 'file', widget: 'file' }
   - name: "pages"
     label: "Pages"
     files:
