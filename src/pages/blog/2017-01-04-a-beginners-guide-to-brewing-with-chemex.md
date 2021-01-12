@@ -13,7 +13,7 @@ tags:
 ---
 ![Crocs Swiftwear](/img/shoe.jpg "Crocs")
 
-youtube dBWaXrccHR8
+youtube YYcsiKRSJ48
 
 ```
 CMS.registerEditorComponent({
