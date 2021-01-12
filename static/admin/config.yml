@@ -30,11 +30,13 @@ collections:
     label: 'Kitchen Sink'
     folder: 'src/pages/sink'
     create: true
+    slug: "{{month}}-{{day}}-{{slug}}"
     fields:
       - label: 'List'
         name: 'list'
         widget: 'list'
         fields:
+          - { label: "Title", name: "title", widget: "string" }
           - { label: 'String', name: 'string', widget: 'string' }
           - { label: 'Boolean', name: 'boolean', widget: 'boolean' }
           - { label: 'Text', name: 'text', widget: 'text' }
