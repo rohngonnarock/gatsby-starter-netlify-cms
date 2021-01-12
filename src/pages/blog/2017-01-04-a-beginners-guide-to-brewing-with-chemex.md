@@ -11,7 +11,7 @@ tags:
   - brewing
   - chemex
 ---
-![chemex](/img/shoe.jpg)
+![Crocs Swiftwear](/img/shoe.jpg "Crocs")
 
 youtube dBWaXrccHR8
 
