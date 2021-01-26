@@ -1,7 +1,7 @@
 ---
-templateKey: "test-page"
+templateKey: test-page
 path: /test
-title: test our values 2
+title: test our values --updated
 ---
 
 ### Shade-grown coffee
